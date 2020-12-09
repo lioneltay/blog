@@ -8,6 +8,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import { css } from "@emotion/react"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -40,7 +41,12 @@ const Bio = () => {
   const avatar = data?.avatar?.childImageSharp?.fixed
 
   return (
-    <div className="bio">
+    <div
+      css={css`
+        display: flex;
+        align-items: center;
+      `}
+    >
       {avatar && (
         <Image
           fixed={avatar}
@@ -51,13 +57,10 @@ const Bio = () => {
           }}
         />
       )}
+
       {author?.name && (
         <p>
           Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
-          </a>
         </p>
       )}
     </div>
