@@ -5,11 +5,8 @@ module.exports = {
       name: "Lionel Tay",
       summary: "who codes things.",
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: "A blog about stuff",
+    siteUrl: "https://blog.lioneltay.com",
   },
   plugins: [
     "gatsby-plugin-emotion",
